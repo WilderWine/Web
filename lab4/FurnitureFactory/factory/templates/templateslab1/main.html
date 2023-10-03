@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+
+ <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      body {
+        overflow: auto; /* добавить полосу прокрутки */
+      }
+      main {
+        min-height: 90%;
+      }
+     foter{
+     min-height: 10%
+     }
+      </style>
+
+<head>
+    <meta charset="UTF-8">
+    {% block head_meta %}{% endblock %}
+    <link rel="shortcut icon" href="/static/images/icon.ico" type="image/x-icon">
+</head>
+
+
+<body>
+
+<header>
+
+    <nav>
+    <ul class="navbar" style="list-style: none">
+        <li style="display: inline; margin-right: 50px"><a href="/main/">Main page</a></li>
+        <li style="display: inline; margin-right: 50px"><a href="/about/">About company</a></li>
+        <li style="display: inline; margin-right: 50px"><a href="/contacts/">Contacts</a></li>
+        <li style="display: inline; margin-right: 50px"><a href="/faq/">FAQ</a></li>
+        <li style="display: inline; margin-right: 50px"><a href="/privacy_policy/">Privacy policy</a></li>
+        <li style="display: inline; margin-right: 50px"><a href="/promo/">Promos</a></li>
+        <li style="display: inline; margin-right: 50px"><a href="/vacancies/">Vacancies</a></li>
+        <li style="display: inline; margin-right: 50px"><a href="/news/">News</a></li>
+        <li style="display: inline; margin-right: 50px"><a href="/comments/">Comments</a></li>
+        <li style="display: inline; margin-right: 50px"><a href="/">Catalogue (old site)</a></li>
+    </ul>
+    </nav>
+</header>
+<main>
+
+    {% block content %}{% endblock %}
+
+</main>
+<footer >  &copy; 2023 Feel like a king with our love and furniture.</footer>
+</body>
+</html>

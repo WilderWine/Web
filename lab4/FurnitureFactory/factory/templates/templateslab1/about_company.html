@@ -1,0 +1,152 @@
+{% extends "templateslab1/main.html" %}
+
+{% block head_meta %}
+
+<Title>About</Title>
+<meta name="description" content="A lot of strange data and info about company">
+<meta name="keywords" content="info, video, audio, certificate, history">
+{% endblock %}
+
+
+{% block content %}
+<style>
+
+   blockquote {
+    width: 400px;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: black;
+    padding: 20px;
+}
+</style>
+<h2 >something about company</h2>
+<div>
+    <h3>Contact info:</h3>
+    Name: <abbr title="Limited Liability Company">LLC</abbr> "QueenSizeCorp"</br>
+    Phone: (A1) +375 (29) 390-76-70</br>
+    E-mail: vernikon72@gmail.com</br>
+    Legal Address: <abbr title="Republic of Belarus">RB</abbr>, Minsk, Odoevskogo street, building 105
+    <br/>
+    <figure>
+        <img src="/static/images/logo.png" alt="logo" width="96">
+        <figcaption>Logo</figcaption>
+    </figure>
+</div>
+<div align="center">
+
+<br/>
+<br/>
+
+<figure>
+    <figcaption>This is the video that inspired us mostly to create this website</figcaption>
+    <br>
+    <video src="/static/files/NeverGonnaGiveUUp.mp4" width="720" preload controls>
+        Error! Can not display :(
+    </video>
+</figure>
+
+<p align="center"><strong>And here we have something else for you...</strong></p>
+
+<figure >
+    <figcaption>Nice old song that will give you energy for the whole day</figcaption>
+    <br>
+    <audio src="/static/files/MaoZedongSong.mp3" preload controls>
+        Error! Can not play :(
+    </audio>
+</figure>
+</div>
+
+
+<div class="poem" align="center">
+<blockquote style="text-align: center">
+    Tea on the table, <wbr/> shal<wbr/>low lamp light...<br/>
+    Custom<wbr/>ers strugg<wbr/>ling to buy <wbr/> them new bed!<br/>
+    Don't get too late <wbr/> or you<wbr/>'ll pick a fight<br/>
+    Best in <abbr title="New Yourk City">NYC</abbr> life outlet.
+</blockquote></br>
+</div>
+
+<div class="history">
+    <p align="center"><strong>Company history</strong></p>
+    <ul title="History" type="square">
+        <li>
+            November 21, 2003 - general director aka admin was born to give birth to the greatest company start.
+        </li></br>
+        <li>
+            2003-2004 - Co-founders were born, also for a high purpose.
+        </li></br>
+        <li>
+            September 1, 2010 - general director aka admin realises what mission she has on her and starts hardworking
+            for a better future.
+        </li></br>
+        <li>
+            August, 2021 - general director aka admin is ganing knowledge to start a big project.
+        </li></br>
+        <li>
+            May 11, 2023 - first model was written:</br>
+            <code>
+                class Client(models.Model):</br>
+    """</br>
+    module for client</br>
+    """</br>
+    first_name = models.CharField(max_length=200,
+                                  help_text='Name')</br>
+    last_name = models.CharField(max_length=200,
+                                 help_text='Surname')</br>
+    birth_date = models.DateField()</br>
+    email = models.EmailField()</br>
+    phone = models.CharField(max_length=19,
+                             help_text='Phone Number')</br>
+    city = models.CharField(max_length=50,
+                            help_text='City')</br>
+    address = models.CharField(max_length=200,
+                               help_text='Street, Building, etc')</br>
+    image = models.ImageField(upload_to='user/%Y/%m/%d', default='static/images/mi_safe.png', null=True)</br>
+
+            </code>
+        </li></br>
+        <li>
+            May 20, 2023 - company website firstly launched successfully!!!
+        </li></br>
+        <li>
+            September 20, 2023 - company expansion, new partners appeared.
+        </li>
+    </ul>
+</div>
+
+<br/><br/><br/>
+
+<div class="certificate" style="border-style: solid; border-width: 1px; border-color: black; width: 300px;" >
+    <p>Certificate of united furniture community membership</p>
+    <hr width="70%"/>
+    <p>UNITED FURNITURE REGISTER</p>
+    <p>CERTIFICATE</p>
+    <p>OF DATA ALTERATION</p>
+    <br/>
+    <p><label>Minsk, Belarus</label><label>28.09.2023</label><p>
+    <p><abbr title="Limited Liability Company ">LLC</abbr>"QueenSizeCorp"</p>
+    <p>(TIN 123465789)<p/>
+    <p>Register number: 6543<p/>
+
+    <div class="left_sided">
+        <p>Veronika Shaikova<p>
+        <p>Director of all associations</p>
+    </div>
+    <hr width="70%"/>
+    <div class="right_sided">
+        <p>Association of Veronika Shaikova)</p>
+        <p>Minsk, Odoevskogo street, building 105</p>
+        <p>A1: +375 (29) 390-76-70</p>
+        <p>e-mail: vernikon72@gmail.com</p>
+    </div>
+</div >
+
+<div claas="fram">
+    <br/>
+    <br/>
+    <a href="https://de.wikipedia.org/wiki/Django_(Framework)" target="fr">django</a>
+    <br/>
+    <iframe name="fr" width="900", height="400">Old Browser</iframe>
+</div>
+
+{% endblock %}

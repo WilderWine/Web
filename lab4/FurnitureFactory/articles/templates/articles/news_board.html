@@ -1,0 +1,33 @@
+{% extends "templateslab1/main.html" %}
+
+
+{% block head_meta %}
+<Title>Articles</Title>
+<meta name="description" content="Links to all articles of company's news board">
+<meta name="keywords" content="news, article, articles">
+{% endblock %}
+
+
+{% block content %}
+
+<h2 align="center">News of the company</h2>
+
+<section>
+    {% for article in articles %}
+    <article style="margin-left: 10%">
+        <h3> {{ article.title }}</h3>
+        <br/>
+        <img src="{{ article.image.url }}" alt="{{ news.title }}" width="300"/>
+        <br/>
+        <p>{{ article.summary }}
+            <br/>
+            <a href="{{ article.id }}/">Read more</a>
+        </p>
+        <hr/>
+        <br/>
+    </article>
+    {% endfor %}
+</section>
+
+{% endblock %}
+

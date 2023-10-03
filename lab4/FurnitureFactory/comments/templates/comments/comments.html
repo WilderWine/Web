@@ -1,0 +1,42 @@
+{% extends "templateslab1/main.html" %}
+
+{% block head_meta %}
+<Title>Comments</Title>
+<meta name="description" content="Comments left by users">
+<meta name="keywords" content="comments, review, rating">
+{% endblock %}
+
+{% block content %}
+<h2 align="center">Comments</h2>
+</br>
+</br>
+
+{% if not comments %}
+<p>
+    There are no comments yet
+</p>
+{% else %}
+
+<ul style="list-style: none">
+    {% for comment in comments %}
+    <li itemtype="http://schema.org/Review">
+        <p itemprop="author"><b>Client: {{comment.client}}, {{comment.rating}}</b></p>
+        <p><small>Date: {{comment.created}}</small></p>
+        <blockquote><i>
+            {{comment.content}}
+        </i></blockquote>
+    </li>
+    <hr/>
+    {% endfor %}
+
+</ul>
+
+{% endif %}
+
+</br>
+</br>
+<form action="add_comment/" target="_blank">
+    <button>Add comment</button>
+</form>
+{% endblock %}
+

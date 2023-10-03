@@ -1,0 +1,128 @@
+{% load static %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+{% endblock %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #191970;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: linear-gradient(to top, #003300 0%, #ffffff 141%);
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            color: yellow;
+            background: linear-gradient(to top, #003300 0%, #ffffff 141%);
+        }
+
+        a {
+            color: linear-gradient(to top, #003300 0%, #ffffff 141%);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #191970;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Product Table</h1>
+    <table class="cart-table" border="2">
+        <thead>
+            <tr>
+                <th>Place</th>
+                <th>Name</th>
+                <th>Purchase count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in product_table %}
+            {% if forloop.counter < 4  %}
+            <tr style="background: green">
+
+                <td>{{ forloop.counter }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.purchase_count }}</td>
+            </tr>{% else %}{%if forloop.counter > 10 %}
+            <tr style="background: red">
+
+                <td>{{ forloop.counter }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.purchase_count }}</td>
+                {% else %}
+                <tr>
+
+                <td>{{ forloop.counter }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.purchase_count }}</td>
+            </tr>
+
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h1>Categories Table</h1>
+    <table class="cart-table" border="2">
+        <tbody>
+            {% for arr in categ_table %}
+            <tr>
+                {% for cell in arr %}
+                <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h1>Collections Table</h1>
+    <table class="cart-table" border="2">
+        <tbody>
+            {% for arr in coll_table %}
+            <tr>
+                {% for cell in arr %}
+                <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+
+    <form action="/statistic/" method="get">
+        <button class="glow-on-hover" type="submit">Back</button>
+    </form>
+</body>
+</html>

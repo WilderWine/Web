@@ -1,0 +1,170 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Furniture Factory{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+     <link rel="shortcut icon" href="/static/images/icon.ico" type="image/x-icon">
+  <!--  <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF5FA;
+        }
+
+        #header {
+            background: linear-gradient(to bottom, #aaff00 0%, #FFC0DE 100%);
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header .logo {
+            font-size: 35px;
+            color: #000;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        #header a {
+            color: #000;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        #subheader {
+            background: linear-gradient(to top, #fff5fa 0%, #FFC0DE  100%);
+            color: #000000;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+
+            align-items: top;
+        }
+
+        #subheader .time {
+            margin-left: 100px;
+            display: flex;
+            align-items: left;
+            font-size: 20px;
+            align-items: top;
+        }
+
+        #subheader .time span {
+            color: #333;
+            margin-right: 10px;
+
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        .cart {
+            margin-right: 100px;
+            font-size: 20px;
+        }
+
+        .cart a {
+            color: #191970;
+        }
+
+        .cart a:hover {
+            color: #000000;
+        }
+
+        #footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            align-items: bottom;
+        }
+    </style>-->
+</head>
+<body>
+    <div id="header">
+        <a href="/" class="logo">Factory</a>
+        <a href="/apistuff/">Lucky Page</a>
+        <a href="/main/">new</a>
+        {% if user.is_superuser %}
+        <a href="/statistic/">Statistic</a>
+        {% endif %}
+    </div>
+    <div id="subheader">
+        <div class="cart">
+            {% if user.is_authenticated and not user.is_superuser%}
+            {% with total_items=cart|length %}
+            {% if cart|length > 0 %}
+            In cart:
+            <a class="button4" href="{% url 'cart:detail' %}">{{ total_items }} pcs, {{ cart.get_total_price }}</a>
+            {% else %}
+            Cart empty
+            {% endif %}
+            {% endwith %}
+            {% endif %}
+        </div>
+        <div class="time">
+            <span>Today: <span id='date'></span></span>
+            <span>Last reload: <span id='time'></span></span>
+
+        </div>
+        </div>
+        <div class="login">
+            {% if user.is_authenticated %}
+            | {{ user.username }} |
+            <a class="button4" href="{% url 'login:logout' %}">Log out</a>
+            {% else %}
+            <a class="button4" href="{% url 'login:login' %}">Sign in</a>
+            <a class="button4" href="{% url 'login:signup' %}">Sign up</a>
+            {% endif %}
+        </div>
+
+    </div>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    <div id="footer">
+        &copy; 2023 Feel like a king with our love and furniture.
+    </div>
+
+    <script>
+        const today = new Date();
+        const year = today.getFullYear();
+        let month = today.getMonth() + 1; // Months start at 0!
+        let day = today.getDate();
+        let hour = today.getHours();
+        let min = today.getMinutes();
+         let sec = today.getSeconds();
+        if (hour < 10)
+            hour = '0' + hour;
+        if (min < 10)
+            min = '0' + min;
+        if (sec < 10)
+            sec = '0' + sec;
+        if (day  < 10) day  = '0' + day ;
+        if ( month < 10)  month = '0' +  month;
+
+        let date_str = day + '-' + month + '-' + year;
+        let time = hour + ":" + min + ":" + sec;
+        let tz = -(new Date().getTimezoneOffset() / 60);
+        if (tz > 0) {
+            tz = "+" + tz;
+        }
+        else if (tz < 0) {
+            tz = "-" + tz;
+        }
+        tz = "UTC" + tz;
+        time = time + "   (" + tz + ")"
+
+        document.getElementById('date').innerHTML = date_str;
+        document.getElementById('time').innerHTML = time;
+        document.getElementById('zone').innerHTML = tz;
+    </script>
+</body>
+</html>

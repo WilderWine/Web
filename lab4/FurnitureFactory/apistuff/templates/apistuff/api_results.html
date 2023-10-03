@@ -1,0 +1,17 @@
+{% extends "factory/homepage.html" %}
+{% load static %}
+
+{% block title %}
+<h1 style="font-align=center"> Api data </h1>
+{% endblock %}
+
+{% block content %}
+<div>
+    <h3>Random dog image for you)</h3>
+    <img src="{{ dogimage }}">
+    <h5>According to your profile data we guess you're a {{ gender }}</h5>
+    <h3>Random dog image for you)</h3>
+    <h5>{{catfact}}</h5>
+
+</div>
+{% endblock %}

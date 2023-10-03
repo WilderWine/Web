@@ -1,0 +1,32 @@
+{% extends "templateslab1/main.html" %}
+
+
+{% block head_meta %}
+<Title>FAQ</Title>
+<meta name="description" content="Frequently asked by users questions and answers">
+<meta name="keywords" content="questions, answers, FAQ, information">
+{% endblock %}
+
+
+{% block content %}
+
+<h2 align="center">FAQ</h2>
+<br>
+<br>
+
+
+{% for faq in faqs %}
+<details>
+
+    <summary itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><strong>{{ faq.question }}</strong></summary>
+    <br/>
+    <p>{{ faq.answer }}</p>
+    <p itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer"><small>{{ faq.created }}</small></p>
+
+</details>
+<br/>
+<hr/>
+<br/>
+
+{% endfor %}
+{% endblock %}

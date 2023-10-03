@@ -1,0 +1,53 @@
+{% extends "templateslab1/main.html" %}
+
+{% block head_meta %}
+<Title>Main</Title>
+<meta name="description" content="The last article and a lot of links, advertisement">
+<meta name="keywords" content="kfc, food, article, partners">
+{% endblock %}
+
+
+{% block content %}
+
+<h2 align="center">GLAVNAYA</h2>
+<div class="article_info">
+    <br/>
+    <h3>Newest Article!</h3>
+    <br/>
+    <a itemprop="affiliation" itemscope itemtype="http://schema.org/Organization" href="/news/{{article.id}}"
+       target="_blank">
+        <img src="{{ article.image.url }}" width="300"/>
+    </a>
+    <br/>
+    {{ article.summary }}
+</div>
+<div class="banner">
+    <h3>Advertisement banner. Stay with food!</h3>
+    <br/>
+    <a href="https://www.kfc.by/" target="_blank">
+        <img src="/static/images/kfc_banner.jpeg" width="600"/>
+    </a>
+</div>
+<div class="partners">
+    <h3>Our partners</h3>
+    <ul style="list-style: none">
+        <li style="display: inline; margin-right: 50px" itemprop="affiliation" itemscope
+            itemtype="http://schema.org/Organization">
+            <a href="https://ami.by/" target="_blank">
+                <img src="/static/images/ami.png" width="75"/></a>
+        </li>
+        <li style="display: inline; margin-right: 50px" itemprop="affiliation" itemscope
+            itemtype="http://schema.org/Organization">
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="/static/images/insta.jpeg" width="75"/></a>
+        </li>
+        <li style="display: inline">
+            <a href="https://evroopt.by/" target="_blank" itemprop="affiliation" itemscope
+               itemtype="http://schema.org/Organization">
+                <img src="/static/images/evric.jpeg" width="75"/></a>
+        </li>
+
+    </ul>
+</div>
+
+{% endblock %}

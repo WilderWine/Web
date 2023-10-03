@@ -1,0 +1,33 @@
+{% extends "templateslab1/main.html" %}
+
+{% block head_meta %}
+<Title>Vacancies</Title>
+<meta name="description" content="Vacancies available in company">
+<meta name="keywords" content="job, work, vacancy, hire">
+{% endblock %}
+
+
+{% block content %}
+
+<h2 align="center">find a job with us</h2>
+
+<table border="1">
+    <tr>
+        <th>Position, date added</th>
+        <th>Description</th>
+        <th>Requirements</th>
+    </tr>
+    {% for vacancy in vacancies %}
+    <tr>
+        <td>{{vacancy.position}},<br/><time datetime="01-01-1991">{{vacancy.created}}</time></td>
+        <td>{{vacancy.description}}</td>
+        <td>{{vacancy.requirements}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p>
+    If you're interested in any of the positions, please, contact us.
+</p>
+
+{% endblock %}

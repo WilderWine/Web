@@ -1,0 +1,45 @@
+{% extends "templateslab1/main.html" %}
+
+{% block head_meta %}
+<Title>Promo</Title>
+<meta name="description" content="Promocodes provided by company">
+<meta name="keywords" content="promo, discount, promocode">
+{% endblock %}
+
+
+{% block content %}
+
+ <style>
+
+ details > summary {
+   list-style: none;
+ }
+
+ details > summary::-webkit-details-marker {
+   display: none;
+ }
+
+ </style>
+
+<h2 align="center">promo</h2>
+<br/>
+
+<ul style="list-style: 1">
+{% for promo in promos %}
+    <li>
+        <details >
+            <summary>{{ promo.slogan }}</summary>
+            <pre>
+                {{ promo.description }}
+                Code: {{ promo.promocode }}
+                Added: <time style="1991-01-01 00:00">{{ promo.created}}
+                {% if promo.is_active %}Active {% else %}Expired {% endif %}
+            </pre>
+        </details>
+    </li>
+{% endfor %}
+
+</ul>
+
+
+{% endblock %}

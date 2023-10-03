@@ -1,0 +1,28 @@
+{% extends "templateslab1/main.html" %}
+
+{% block head_meta %}
+<Title>Article {{article.id}}</Title>
+<meta name="description" content="Details on a particular article">
+<meta name="keywords" content="news, article">
+{% endblock %}
+
+{% block content %}
+
+<div align="center" class="central_container">
+<section style="width: 60%; ">
+
+    <article>
+
+        <h3>{{article.title}}</h3>
+        <img src="{{ article.image.url}}" width="400"/>
+        <br>
+        <small>{{ article.created}}</small>
+        <br>
+        <br>
+        <p>{{article.summary}}</p>
+        <div class="content">{{article.content}}</div>
+    </article>
+</section>
+</div>
+
+{% endblock %}
