@@ -1,27 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<header>
-    <h2 align="center">Leave your comment</h2>
-</header>
-<main>
+{% extends "templateslab1/main.html" %}
+
+{% block content %}
     <div class="container">
         <form method="post" action=".">
             {% csrf_token %}
-            <details>
-                <summary>Leave feedback</summary>
-                <input type="range" name="range" min="1" max="5"><br/>
+
+                <p>Leave feedback</p>
+                <input class="rating-slider" type="range" name="range" min="1" max="5"><br/>
                 <textarea name="text" placeholder="Share your opinion here"  style="width: 400px; height: 200px"></textarea><br/>
                 <br/>
                 <button class="button1" type="submit" name="review">Add</button>
-            </details>
+
         </form>
     </div>
-</main>
-<footer></footer>
-</body>
-</html>
+
+{% endblock %}

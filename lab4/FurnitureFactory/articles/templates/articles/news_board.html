@@ -14,15 +14,16 @@
 
 <section>
     {% for article in articles %}
-    <article style="margin-left: 10%">
+    <article style="margin-left: 10%; width: 60%;">
         <h3> {{ article.title }}</h3>
         <br/>
         <img src="{{ article.image.url }}" alt="{{ news.title }}" width="300"/>
         <br/>
-        <p>{{ article.summary }}
-            <br/>
-            <a href="{{ article.id }}/">Read more</a>
+        <p class="overflowed-summary">{{ article.summary }}
+
         </p>
+
+        <a href="{{ article.id }}/">Read more</a>
         <hr/>
         <br/>
     </article>

@@ -65,7 +65,7 @@ class Client(models.Model):
     city = models.CharField(max_length=50,
                             help_text='City')
     address = models.CharField(max_length=200,
-                               help_text='Street, Building, etc')
+                              help_text='Street, Building, etc')
     image = models.ImageField(upload_to='user/%Y/%m/%d', default='static/images/mi_safe.png', null=True)
 
     def get_absolute_url(self):

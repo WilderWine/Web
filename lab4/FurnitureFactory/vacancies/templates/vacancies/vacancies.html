@@ -9,9 +9,9 @@
 
 {% block content %}
 
-<h2 align="center">find a job with us</h2>
-
-<table border="1">
+<div class="table content">
+<!--<table border="1" class="vacancies">
+    <caption>Find a job with us!</caption>
     <tr>
         <th>Position, date added</th>
         <th>Description</th>
@@ -23,11 +23,43 @@
         <td>{{vacancy.description}}</td>
         <td>{{vacancy.requirements}}</td>
     </tr>
+    {% if not vacancy.id|divisibleby:2 %}
+    <tr>
+        <td>I'm not empty</td>
+        <td colspan="2"></td>
+    </tr>
+    {% endif %}
     {% endfor %}
-</table>
+</table>-->
+
+    {% for vacancy in vacancies %}
+    <table class="vacancies">
+        <tr>
+            <th>Position, date added</th>
+            <th>Requirements</th>
+        </tr>
+        <tr>
+            <td>{{vacancy.position}},<br/><time datetime="01-01-1991">{{vacancy.created}}</time></td>
+            <td>{{vacancy.requirements}}</td>
+        </tr>
+        <tr>
+            <td>I'm not empty</td>
+            <td colspan="2"></td>
+        </tr>
+
+    </table>
+    <div>
+        <p>{{vacancy.description}}</p>
+    </div>
+
+    <br class="vacancydivider">
+    <br class="vacancydivider">
+
+    {% endfor %}
+
 
 <p>
     If you're interested in any of the positions, please, contact us.
 </p>
-
+</div>
 {% endblock %}

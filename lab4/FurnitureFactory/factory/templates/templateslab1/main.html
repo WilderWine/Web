@@ -16,15 +16,14 @@
       main {
         min-height: 90%;
       }
-     foter{
-     min-height: 10%
-     }
+
       </style>
 
 <head>
     <meta charset="UTF-8">
     {% block head_meta %}{% endblock %}
     <link rel="shortcut icon" href="/static/images/icon.ico" type="image/x-icon">
+     <link rel="stylesheet" href="/static/css/main.css" type="text/css">
 </head>
 
 
@@ -46,12 +45,14 @@
         <li style="display: inline; margin-right: 50px"><a href="/">Catalogue (old site)</a></li>
     </ul>
     </nav>
-</header>
+    </header>
 <main>
-
+    <img class="bg-im" src="/static/images/bckgrnd.jpeg"/>
+    <div class="maincontent">
     {% block content %}{% endblock %}
+    </div>
 
 </main>
-<footer >  &copy; 2023 Feel like a king with our love and furniture.</footer>
+<footer > <p style="color: rgb(100, 0, 140);"> &copy; 2023 Feel like a king with our love and furniture.</p></footer>
 </body>
 </html>

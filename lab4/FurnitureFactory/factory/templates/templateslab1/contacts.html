@@ -14,7 +14,7 @@
 </br>
 <img scr="mi_safe.png" width="100">
 <table border="1" width="70%" align="center">
-    <tr>
+    <!--<tr>
         <th id="member" colspan="2">Member</th>
         <th id="phone">Phone</th>
         <th id="email">E-mail</th>
@@ -32,6 +32,28 @@
         {% else %}
         <td headers="role">Staff member</td>
         {% endif %}
+    </tr>
+    {% endfor %}
+    -->
+
+    {% for member in staff %}
+
+    <tr>
+        <td>{{member.id}}</td>
+        <td>
+            <div class="flex-container">
+                <div><img src="{{ member.image.url }}" width="200"/></div>
+                <div>{{ member.first_name }} </br> {{ member.last_name }}</div>
+                <div>{{ member.phone }}</div>
+                <div>{{ member.email }}</div>
+                <div>{% if member.is_superuser%}
+                    Admin
+                    {% else %}
+                    Staff member
+                    {% endif %}
+                </div>
+            </div>
+        </td>
     </tr>
 
     {% endfor %}

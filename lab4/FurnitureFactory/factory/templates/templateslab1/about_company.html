@@ -9,27 +9,22 @@
 
 
 {% block content %}
-<style>
-
-   blockquote {
-    width: 400px;
-    border-style: dashed;
-    border-width: 1px;
-    border-color: black;
-    padding: 20px;
-}
-</style>
+<div style="margin-left: 5%; width: 90%;">
 <h2 >something about company</h2>
 <div>
+    <div class="rekvizity">
     <h3>Contact info:</h3>
-    Name: <abbr title="Limited Liability Company">LLC</abbr> "QueenSizeCorp"</br>
-    Phone: (A1) +375 (29) 390-76-70</br>
-    E-mail: vernikon72@gmail.com</br>
-    Legal Address: <abbr title="Republic of Belarus">RB</abbr>, Minsk, Odoevskogo street, building 105
-    <br/>
+    <p class="rekvizity text">
+        Name: <abbr title="Limited Liability Company">LLC</abbr> "QueenSizeCorp"</br>
+        Phone: (A1) +375 (29) 390-76-70</br>
+        E-mail: vernikon72@gmail.com</br>
+        Legal Address: <abbr title="Republic of Belarus">RB</abbr>, Minsk, Odoevskogo street, building 105
+    </p>
+    </div>
+        <br/>
     <figure>
-        <img src="/static/images/logo.png" alt="logo" width="96">
-        <figcaption>Logo</figcaption>
+        <img id="logotype" src="/static/images/logo.png" alt="logo" width="96">
+       <!-- <figcaption>Logo</figcaption>-->
     </figure>
 </div>
 <div align="center">
@@ -58,17 +53,26 @@
 
 
 <div class="poem" align="center">
-<blockquote style="text-align: center">
-    Tea on the table, <wbr/> shal<wbr/>low lamp light...<br/>
+<blockquote lang="en" cite="https://lyricstranslate.com/en/absicht-lyrics.html">
+   <p> Tea on the table, <wbr/> shal<wbr/>low lamp light...<br/>
     Custom<wbr/>ers strugg<wbr/>ling to buy <wbr/> them new bed!<br/>
     Don't get too late <wbr/> or you<wbr/>'ll pick a fight<br/>
-    Best in <abbr title="New Yourk City">NYC</abbr> life outlet.
+    Best in <abbr title="New Yourk City">NYC</abbr> life outlet.</p>
+     <cite>Me</cite>
+</blockquote></br>
+    <blockquote lang="de" cite="https://lyricstranslate.com/en/absicht-lyrics.html">
+    <p>Ich habe ein Ge<wbr/> wehr<br/>
+    Ich habe es ge</wbr>laden<br/>
+    Ein Knall... Du hast kein Kopf<wbr/>chen mehr<br/>
+    Das sehe ich durch die Schwa<wbr/>den<br/>.
+        Entshuldigunf, ich hab' weiteres ver<wbr>gessen(.</p>
+        <cite>Till</cite>
 </blockquote></br>
 </div>
 
 <div class="history">
     <p align="center"><strong>Company history</strong></p>
-    <ul title="History" type="square">
+    <ul title="History">
         <li>
             November 21, 2003 - general director aka admin was born to give birth to the greatest company start.
         </li></br>
@@ -116,24 +120,24 @@
 
 <br/><br/><br/>
 
-<div class="certificate" style="border-style: solid; border-width: 1px; border-color: black; width: 300px;" >
-    <p>Certificate of united furniture community membership</p>
-    <hr width="70%"/>
-    <p>UNITED FURNITURE REGISTER</p>
-    <p>CERTIFICATE</p>
-    <p>OF DATA ALTERATION</p>
+<div class="certificate"  >
+    <p id="cert-intro">Certificate of united furniture community membership</p>
+    <hr class="certificate-hrdiv"/>
+    <p id="cert-title1">UNITED FURNITURE REGISTER</p>
+    <p id="cert-title2">CERTIFICATE</p>
+    <p id="cert-title3">OF DATA ALTERATION</p>
     <br/>
-    <p><label>Minsk, Belarus</label><label>28.09.2023</label><p>
-    <p><abbr title="Limited Liability Company ">LLC</abbr>"QueenSizeCorp"</p>
-    <p>(TIN 123465789)<p/>
-    <p>Register number: 6543<p/>
+    <p class="p-double-labeled"><label id="town-label">Minsk, Belarus</label><label id="date-label">28.09.2023</label><p>
+    <p id="OOO" class="bold"><abbr title="Limited Liability Company ">LLC</abbr>"QueenSizeCorp"</p>
+    <p class="collapse">(TIN 123465789)<p/>
+    <p class="bold-underlined collapse">Register number: 6543<p/>
 
-    <div class="left_sided">
+    <div class="left sided">
         <p>Veronika Shaikova<p>
         <p>Director of all associations</p>
     </div>
-    <hr width="70%"/>
-    <div class="right_sided">
+    <hr class="certificate-hrdiv"/>
+    <div class="right sided bold-small">
         <p>Association of Veronika Shaikova)</p>
         <p>Minsk, Odoevskogo street, building 105</p>
         <p>A1: +375 (29) 390-76-70</p>
@@ -141,12 +145,13 @@
     </div>
 </div >
 
-<div claas="fram">
+<div class="fram">
     <br/>
     <br/>
     <a href="https://de.wikipedia.org/wiki/Django_(Framework)" target="fr">django</a>
     <br/>
     <iframe name="fr" width="900", height="400">Old Browser</iframe>
+</div>
 </div>
 
 {% endblock %}

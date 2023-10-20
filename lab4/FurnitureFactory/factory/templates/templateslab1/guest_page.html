@@ -9,7 +9,8 @@
 
 {% block content %}
 
-<h2 align="center">GLAVNAYA</h2>
+<div class="guest container" style="margin-left: 5%; width: 100%;">
+    <h2 align="center">GLAVNAYA</h2>
 <div class="article_info">
     <br/>
     <h3>Newest Article!</h3>
@@ -22,10 +23,8 @@
     {{ article.summary }}
 </div>
 <div class="banner">
-    <h3>Advertisement banner. Stay with food!</h3>
-    <br/>
     <a href="https://www.kfc.by/" target="_blank">
-        <img src="/static/images/kfc_banner.jpeg" width="600"/>
+        <img class="bannerimg" src="/static/images/kfc_banner.jpeg" width="600"/>
     </a>
 </div>
 <div class="partners">
@@ -34,20 +33,20 @@
         <li style="display: inline; margin-right: 50px" itemprop="affiliation" itemscope
             itemtype="http://schema.org/Organization">
             <a href="https://ami.by/" target="_blank">
-                <img src="/static/images/ami.png" width="75"/></a>
+                <img class="partner-image" src="/static/images/ami.png" width="75"/></a>
         </li>
         <li style="display: inline; margin-right: 50px" itemprop="affiliation" itemscope
             itemtype="http://schema.org/Organization">
             <a href="https://www.instagram.com/" target="_blank">
-                <img src="/static/images/insta.jpeg" width="75"/></a>
+                <img class="partner-image" src="/static/images/insta.jpeg" width="75"/></a>
         </li>
         <li style="display: inline">
             <a href="https://evroopt.by/" target="_blank" itemprop="affiliation" itemscope
                itemtype="http://schema.org/Organization">
-                <img src="/static/images/evric.jpeg" width="75"/></a>
+                <img class="partner-image" src="/static/images/evric.jpeg" width="75"/></a>
         </li>
 
     </ul>
 </div>
-
+</div>
 {% endblock %}

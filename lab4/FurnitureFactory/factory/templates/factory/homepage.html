@@ -1,103 +1,50 @@
-{% load static %}
 
 <!DOCTYPE html>
+
 <html>
+ <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      body {
+        overflow: auto; /* добавить полосу прокрутки */
+      }
+      main {
+        min-height: 90%;
+      }
+
+      </style>
 <head>
     <meta charset="utf-8" />
     <title>{% block title %}Furniture Factory{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
-     <link rel="shortcut icon" href="/static/images/icon.ico" type="image/x-icon">
-  <!--  <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #FFF5FA;
-        }
+    <link rel="stylesheet" href="/static/css/homepage.css" type="text/css">
+    <link rel="shortcut icon" href="/static/images/icon.ico" type="image/x-icon">
+    <style>
 
-        #header {
-            background: linear-gradient(to bottom, #aaff00 0%, #FFC0DE 100%);
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        #header .logo {
-            font-size: 35px;
-            color: #000;
-            margin-right: 10px;
-            text-decoration: none;
-        }
-
-        #header a {
-            color: #000;
-            margin-left: 10px;
-            text-decoration: none;
-        }
-
-        #subheader {
-            background: linear-gradient(to top, #fff5fa 0%, #FFC0DE  100%);
-            color: #000000;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-
-            align-items: top;
-        }
-
-        #subheader .time {
-            margin-left: 100px;
-            display: flex;
-            align-items: left;
-            font-size: 20px;
-            align-items: top;
-        }
-
-        #subheader .time span {
-            color: #333;
-            margin-right: 10px;
-
-        }
-
-        #content {
-            padding: 20px;
-        }
-
-        .cart {
-            margin-right: 100px;
-            font-size: 20px;
-        }
-
-        .cart a {
-            color: #191970;
-        }
-
-        .cart a:hover {
-            color: #000000;
-        }
-
-        #footer {
-            background: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            align-items: bottom;
-        }
-    </style>-->
+    </style>
 </head>
 <body>
-    <div id="header">
-        <a href="/" class="logo">Factory</a>
+<header>
+    <div class="headernav" style="height: 100%;">
+        <a href="/" class="logo">
+            <img width="75" src="/static/images/logo.png"/>
+        </a>
         <a href="/apistuff/">Lucky Page</a>
         <a href="/main/">new</a>
         {% if user.is_superuser %}
         <a href="/statistic/">Statistic</a>
         {% endif %}
     </div>
-    <div id="subheader">
-        <div class="cart">
+
+
+</header>
+<main>
+    <div class="maincontent">
+    <div id="subheader" >
+        <div class="cart" >
             {% if user.is_authenticated and not user.is_superuser%}
             {% with total_items=cart|length %}
             {% if cart|length > 0 %}
@@ -115,7 +62,7 @@
 
         </div>
         </div>
-        <div class="login">
+        <div class="login" >
             {% if user.is_authenticated %}
             | {{ user.username }} |
             <a class="button4" href="{% url 'login:logout' %}">Log out</a>
@@ -124,14 +71,12 @@
             <a class="button4" href="{% url 'login:signup' %}">Sign up</a>
             {% endif %}
         </div>
-
     </div>
-    <div id="content">
-        {% block content %}{% endblock %}
+    <div style="margin-top: -100px;">
+   {% block content %}{% endblock %}
     </div>
-    <div id="footer">
-        &copy; 2023 Feel like a king with our love and furniture.
     </div>
+</main>
 
     <script>
         const today = new Date();
@@ -166,5 +111,10 @@
         document.getElementById('time').innerHTML = time;
         document.getElementById('zone').innerHTML = tz;
     </script>
+
+<div class="footer">
+        <p style="color: rgb(100, 0, 140);">&copy; 2023 Feel like a king with our love and furniture.</p>
+    </div>
 </body>
+
 </html>

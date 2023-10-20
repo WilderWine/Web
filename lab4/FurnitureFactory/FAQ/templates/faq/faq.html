@@ -9,20 +9,21 @@
 
 
 {% block content %}
-
+<div class="faq container">
 <h2 align="center">FAQ</h2>
 <br>
 <br>
 
 
 {% for faq in faqs %}
-<details>
+<details id="faq">
 
     <summary itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><strong>{{ faq.question }}</strong></summary>
+    <div>
     <br/>
-    <p>{{ faq.answer }}</p>
-    <p itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer"><small>{{ faq.created }}</small></p>
-
+    <p itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer">{{ faq.answer }}</p>
+    <p ><small>{{ faq.created }}</small></p>
+    </div>
 </details>
 <br/>
 <hr/>
@@ -30,3 +31,4 @@
 
 {% endfor %}
 {% endblock %}
+</div>
