@@ -138,6 +138,8 @@ def product_delete(request, id):
 
 def about(request):
     return render(request, 'templateslab1/about_company.html')
+def lab3(request):
+    return render(request, 'templateslab1/lab3.html')
 
 
 def contacts(request):

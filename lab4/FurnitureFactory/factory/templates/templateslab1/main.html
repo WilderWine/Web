@@ -24,10 +24,12 @@
     {% block head_meta %}{% endblock %}
     <link rel="shortcut icon" href="/static/images/icon.ico" type="image/x-icon">
      <link rel="stylesheet" href="/static/css/main.css" type="text/css">
+
 </head>
 
 
 <body>
+
 
 <header>
 
@@ -42,17 +44,41 @@
         <li style="display: inline; margin-right: 50px"><a href="/vacancies/">Vacancies</a></li>
         <li style="display: inline; margin-right: 50px"><a href="/news/">News</a></li>
         <li style="display: inline; margin-right: 50px"><a href="/comments/">Comments</a></li>
+        <li style="display: inline; margin-right: 50px"><a href="/lab3/">Lab3</a></li>
         <li style="display: inline; margin-right: 50px"><a href="/">Catalogue (old site)</a></li>
     </ul>
     </nav>
     </header>
 <main>
     <img class="bg-im" src="/static/images/bckgrnd.jpeg"/>
+
     <div class="maincontent">
+           <div class="style-form">
+        <label for="styleOptions">Font:   </label>
+        <form id="styleOptions">
+
+<!--input!!!-->
+    <label for="textColour">Цвет текста:</label>
+    <input type="color" id="textColour" name="text-color">
+
+    <button type="button" onclick="fontUp()">+</button>
+    <button type="button" onclick="fontDown()">-</button>
+
+</form>
+    </div>
     {% block content %}{% endblock %}
+        <div id="p_timer">Timer</div>
     </div>
 
 </main>
-<footer > <p style="color: rgb(100, 0, 140);"> &copy; 2023 Feel like a king with our love and furniture.</p></footer>
+<footer id="footer"> <p style="color: rgb(100, 0, 140);"> &copy; 2023 Feel like a king with our love and furniture.</p></footer>
+
 </body>
+<script src="/static/js/butterfly.js" defer></script>
+<script src="/static/js/table.js" defer></script>
+<script src="/static/js/task11.js" defer></script>
+<script src="/static/js/timer.js" defer></script>
+<script src="/static/js/age_validation.js" defer></script>
+<script src="/static/js/font_styles.js" defer></script>
+<script src="/static/js/banners.js" defer></script>
 </html>

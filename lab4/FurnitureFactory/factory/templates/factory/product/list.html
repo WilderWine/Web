@@ -51,10 +51,10 @@
 
   <div class="product-grid">
     {% for product in products %}
-      <div class="item">
-        <a href="{{ product.get_absolute_url }}">
-          <img width="600" class="product-image" src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/mi_safe.png' %}{% endif %}">
-        </a>
+      <div class="item contact">
+        <!--<a href="{{ product.get_absolute_url }}">-->
+          <img width="600" class="product-image contact" src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/mi_safe.png' %}{% endif %}">
+      <!--  </a>-->
         <br/>
         <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
         <br>

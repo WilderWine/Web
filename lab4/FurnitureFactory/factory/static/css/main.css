@@ -357,11 +357,21 @@
             -webkit-box-shadow: 5px 10px rgba(107,0,0, 0.4);
             -o-box-shadow: 5px 10px rgba(107,0,0, 0.4);
         }
+        .selected {
+            background: #9b59b6;
+            color: white;
+        }
+
+        .selected-even {
+            background: #3498db;
+            color: white;
+        }
 
         .rekvizity{
             font-family: "Goudy Bookletter 1911", sans-serif;
             font-kerning: normal;
             font-variant-caps: small-caps;
+            display:block;
 
         }
         .rekvizity.text::first-line{

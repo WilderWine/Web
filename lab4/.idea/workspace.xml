@@ -5,26 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="032c0402-d468-47ef-9e6b-0f4fdbb0f1c8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/images/bk.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/images/butterfly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/images/butterfly1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/images/dodo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/js/age.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/js/age_validation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/js/banners.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/js/butterfly.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/js/cardanim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/js/font_styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/js/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/js/task11.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/js/timer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FurnitureFactory/factory/templates/templateslab1/lab3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FurnitureFactory/FAQ/templates/faq/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/FAQ/templates/faq/faq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FurnitureFactory/articles/templates/articles/article_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/articles/templates/articles/article_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FurnitureFactory/articles/templates/articles/news_board.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/articles/templates/articles/news_board.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FurnitureFactory/comments/templates/comments/create_comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/comments/templates/comments/create_comment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FurnitureFactory/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FurnitureFactory/factory/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/factory/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FurnitureFactory/factory/static/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/css/homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FurnitureFactory/factory/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/factory/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FurnitureFactory/factory/templates/factory/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/factory/templates/factory/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FurnitureFactory/factory/templates/factory/product/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/factory/templates/factory/product/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FurnitureFactory/factory/templates/factory/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/factory/templates/factory/product/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FurnitureFactory/factory/templates/templateslab1/about_company.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/factory/templates/templateslab1/about_company.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FurnitureFactory/factory/templates/templateslab1/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/factory/templates/templateslab1/contacts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FurnitureFactory/factory/templates/templateslab1/guest_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/factory/templates/templateslab1/guest_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FurnitureFactory/factory/templates/templateslab1/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/factory/templates/templateslab1/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FurnitureFactory/factory/templates/templateslab1/privacy_policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/factory/templates/templateslab1/privacy_policy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FurnitureFactory/statistic/templates/statistic/statistic.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/statistic/templates/statistic/statistic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FurnitureFactory/statistic/templates/statistic/tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/statistic/templates/statistic/tables.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FurnitureFactory/vacancies/templates/vacancies/vacancies.html" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/vacancies/templates/vacancies/vacancies.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FurnitureFactory/factory/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/factory/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FurnitureFactory/factory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FurnitureFactory/factory/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +38,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -53,15 +57,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/veronika/web/lab4/FurnitureFactory/factory/static/images&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.views.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/veronika/web/lab4/FurnitureFactory/factory/static/images",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/FurnitureFactory/factory/static/images" />
@@ -81,6 +86,7 @@
   <component name="RunManager" selected="Python.views">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="lab4" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -102,6 +108,7 @@
     </configuration>
     <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="lab4" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -123,6 +130,7 @@
     </configuration>
     <configuration name="Python tests for test_view.test_11" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="lab4" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -137,6 +145,7 @@
     </configuration>
     <configuration name="Python tests for test_view.test_12" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="lab4" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -151,6 +160,7 @@
     </configuration>
     <configuration name="Python tests for test_view.test_horror_page" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="lab4" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -165,6 +175,7 @@
     </configuration>
     <configuration name="Python tests for test_view.test_with_authenticated_client" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="lab4" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -186,6 +197,13 @@
         <item itemvalue="Python tests.Python tests for test_view.test_with_authenticated_client" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-7a29c1521ef0-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.11799.298" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

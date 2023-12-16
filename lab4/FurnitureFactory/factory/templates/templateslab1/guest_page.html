@@ -22,10 +22,29 @@
     <br/>
     {{ article.summary }}
 </div>
-<div class="banner">
-    <a href="https://www.kfc.by/" target="_blank">
-        <img class="bannerimg" src="/static/images/kfc_banner.jpeg" width="600"/>
-    </a>
+{% if user.is_superuser %}
+    <form>
+        <label for="rotation-interval">Rotation gap:</label>
+        <input type="number" id="rotation-interval" name="rotation-interval" value="5">
+        <input type="button" value="Apply" onclick="changeInterval()">
+    </form>
+{% endif %}
+<div class="banners">
+    <div class="banner"  hidden>
+        <a href="https://www.kfc.by/" target="_blank">
+            <img class="bannerimg" src="/static/images/kfc_banner.jpeg" width="600"/>
+        </a>
+    </div>
+    <div class="banner" hidden>
+        <a href="https://burger-king.by/" target="_blank" >
+            <img class="bannerimg" src="/static/images/bk.jpeg" width="600"/>
+        </a>
+    </div>
+    <div class="banner" hidden>
+        <a href="https://dodopizza.by/" target="_blank">
+            <img class="bannerimg" src="/static/images/dodo.jpeg" width="600"/>
+        </a>
+    </div>
 </div>
 <div class="partners">
     <h3>Our partners</h3>
